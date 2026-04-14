@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savor | Premium Food Delivery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Check if user is logged in
+        if (!sessionStorage.getItem('isLoggedIn')) {
+            window.location.href = 'login.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-leaf"></i>
+                <span>Savor.</span>
+            </div>
+            <ul class="nav-links">
+                <li class="active" data-target="homeView"><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li data-target="exploreView"><a href="#"><i class="fa-solid fa-compass"></i> Explore</a></li>
+                <li data-target="favoritesView"><a href="#"><i class="fa-solid fa-heart"></i> Favorites</a></li>
+                <li data-target="historyView"><a href="#"><i class="fa-solid fa-clock-rotate-left"></i> History</a></li>
+                <li data-target="settingsView"><a href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
+            </ul>
+            <div class="user-profile">
+                <img src="https://ui-avatars.com/api/?name=User&background=0D8ABC&color=fff&rounded=true" alt="User Profile">
+                <div class="user-info">
+                    <span class="user-name">Guest User</span>
+                    <span class="user-role">Food Explorer</span>
+                </div>
+                <button class="logout-btn" id="logoutBtn" title="Logout">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="search-bar">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="Search for delicious food...">
+                </div>
+                <div class="header-actions">
+                    <button class="icon-btn cart-toggle" id="cartToggleBtn">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="badge" id="cartBadge">0</span>
+                    </button>
+                </div>
+            </header>
+
+            <div id="homeView" class="view-section active">
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Craving something <span class="highlight">extraordinary?</span></h1>
+                    <p>Discover the finest local dishes, delivered straight to your door with a dash of elegance.</p>
+                    <button class="primary-btn">Order Now <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                <div class="hero-image">
+                    <!-- A decorative element for the hero -->
+                </div>
+            </section>
+
+            <section class="categories">
+                <div class="section-header">
+                    <h2>Categories</h2>
+                    <a href="#" class="view-all">View All</a>
+                </div>
+                <div class="category-list" id="categoryList">
+                    <button class="category-pill active" data-category="all">
+                        <i class="fa-solid fa-utensils"></i> All
+                    </button>
+                    <button class="category-pill" data-category="burger">
+                        <i class="fa-solid fa-burger"></i> Burgers
+                    </button>
+                    <button class="category-pill" data-category="pizza">
+                        <i class="fa-solid fa-pizza-slice"></i> Pizza
+                    </button>
+                    <button class="category-pill" data-category="salad">
+                        <i class="fa-solid fa-bowl-food"></i> Healthy
+                    </button>
+                    <button class="category-pill" data-category="dessert">
+                        <i class="fa-solid fa-ice-cream"></i> Desserts
+                    </button>
+                </div>
+            </section>
+
+            <section class="popular-dishes">
+                <div class="section-header">
+                    <h2>Popular Dishes</h2>
+                    <div class="filter-controls">
+                        <button class="filter-btn"><i class="fa-solid fa-sliders"></i> Filter</button>
+                    </div>
+                </div>
+                <div class="food-grid" id="foodGrid">
+                    <!-- Food items will be dynamically injected here via app.js -->
+                </div>
+            </section>
+            </div>
+            
+            <!-- Explore View -->
+            <div id="exploreView" class="view-section">
+                <section class="explore-hero">
+                    <div class="explore-content">
+                        <h1>Discover <span class="highlight">New Tastes</span></h1>
+                        <p>Explore trending collections and top-rated restaurants near you.</p>
+                    </div>
+                </section>
+                
+                <section class="restaurants">
+                    <div class="section-header">
+                        <h2>Nearby Restaurants</h2>
+                    </div>
+                    <div class="restaurant-grid" id="restaurantGrid">
+                        <!-- Restaurants will be dynamically injected here via app.js -->
+                    </div>
+                </section>
+            </div> <!-- End exploreView -->
+            
+            <div id="favoritesView" class="view-section">
+                <div class="section-header" style="margin-bottom: 20px;">
+                    <h2>Your Favorites</h2>
+                </div>
+                <div class="food-grid" id="favoritesGrid"></div>
+                
+                <div class="empty-state" id="favEmptyState">
+                    <i class="fa-solid fa-heart-crack"></i>
+                    <h2>No favorites yet</h2>
+                    <p>Start liking dishes to see them here.</p>
+                </div>
+            </div>
+            
+            <div id="historyView" class="view-section">
+                <div class="empty-state">
+                    <i class="fa-solid fa-clock"></i>
+                    <h2>No order history</h2>
+                    <p>Your past orders will appear here.</p>
+                </div>
+            </div>
+            
+            <div id="settingsView" class="view-section">
+                <div class="empty-state">
+                    <i class="fa-solid fa-gear"></i>
+                    <h2>Settings</h2>
+                    <p>Account preferences coming soon.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Cart Sidebar -->
+        <aside class="cart-sidebar" id="cartSidebar">
+            <div class="cart-header">
+                <h2>Your Order</h2>
+                <button class="close-cart" id="closeCartBtn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div class="cart-items" id="cartItemsContainer">
+                <div class="empty-cart-message">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <p>Your cart is empty.</p>
+                </div>
+                <!-- Cart items dynamically injected -->
+            </div>
+
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotalAmount">₹0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Delivery</span>
+                    <span id="deliveryAmount">₹0.00</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span id="totalAmount">₹0.00</span>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+            </div>
+        </aside>
+        
+        <div class="cart-overlay" id="cartOverlay"></div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+{
+    "users": [
+        {
+            "email": "foodie@example.com",
+            "password": "password123",
+            "name": "Original Foodie",
+            "favorites": []
+        },
+        {
+            "email": "camyysalt@gmail.com",
+            "password": "camy12345",
+            "name": "Shacky",
+            "favorites": []
+        }
+    ],
+    "foodItems": [
+        {
+            "id": 1,
+            "title": "Truffle Beef Burger",
+            "category": "burger",
+            "price": 180,
+            "rating": 4.8,
+            "desc": "Premium wagyu beef patty, black truffle mayo, caramelized onions, and aged cheddar on a toasted brioche bun.",
+            "img": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+            "id": 2,
+            "title": "Spicy Chicken Sandwich",
+            "category": "burger",
+            "price": 14,
+            "rating": 4.6,
+            "desc": "Crispy buttermilk fried chicken, house-made spicy slaw, and pickles.",
+            "img": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+            "id": 3,
+            "title": "Margherita Artisan Pizza",
+            "category": "pizza",
+            "price": 22,
+            "rating": 4.9,
+            "desc": "Wood-fired crust, San Marzano tomatoes, fresh mozzarella di bufala, and basil.",
+            "img": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+            "id": 4,
+            "title": "Pepperoni Inferno",
+            "category": "pizza",
+            "price": 24.5,
+            "rating": 4.7,
+            "desc": "Double pepperoni, hot honey drizzle, fresh jalapeños, and blended cheeses.",
+            "img": "https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+            "id": 5,
+            "title": "Avocado Quinoa Bowl",
+            "category": "salad",
+            "price": 16,
+            "rating": 4.5,
+            "desc": "Organic quinoa, fresh sliced avocado, cherry tomatoes, and lemon-tahini dressing.",
+            "img": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+            "id": 6,
+            "title": "Mediterranean Salad",
+            "category": "salad",
+            "price": 15.5,
+            "rating": 4.4,
+            "desc": "Crisp romaine, kalamata olives, feta cheese, cucumber, and Greek vinaigrette.",
+            "img": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+            "id": 7,
+            "title": "Molten Chocolate Lava",
+            "category": "dessert",
+            "price": 9.5,
+            "rating": 4.9,
+            "desc": "Decadent chocolate cake with a warm gooey center, served with vanilla bean ice cream.",
+            "img": "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+            "id": 8,
+            "title": "Classic Cheesecake",
+            "category": "dessert",
+            "price": 8,
+            "rating": 4.6,
+            "desc": "New York style cheesecake with a handmade graham cracker crust and berry compote.",
+            "img": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+            "id": 9,
+            "title": "Double Bacon Smashburger",
+            "category": "burger",
+            "price": 16.5,
+            "rating": 4.8,
+            "desc": "Two smashed beef patties, crispy applewood smoked bacon, american cheese, and house sauce.",
+            "img": "https://images.unsplash.com/photo-1586816001966-79b736744398?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+            "id": 10,
+            "title": "Vegan Supreme Pizza",
+            "category": "pizza",
+            "price": 21,
+            "rating": 4.5,
+            "desc": "Plant-based cheese, roasted bell peppers, mushrooms, red onions, and black olives.",
+            "img": "https://images.unsplash.com/photo-1548369937-47519962c11a?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+            "id": 11,
+            "title": "Chicken Caesar Salad",
+            "category": "salad",
+            "price": 14.5,
+            "rating": 4.7,
+            "desc": "Crisp romaine lettuce, parmesan cheese, crunchy croutons, and creamy Caesar dressing.",
+            "img": "https://images.unsplash.com/photo-1550304943-4f24f54ddde9?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+            "id": 12,
+            "title": "Tiramisu",
+            "category": "dessert",
+            "price": 10,
+            "rating": 4.8,
+            "desc": "Layered Italian dessert with espresso-soaked ladyfingers and mascarpone cream.",
+            "img": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+            "id": 13,
+            "title": "Gourmet Mushroom Burger",
+            "category": "burger",
+            "price": 17,
+            "rating": 4.7,
+            "desc": "Swiss cheese, sautéed mushrooms, and garlic aioli.",
+            "img": "https://images.unsplash.com/photo-1594212699903-ec8a3eea50f6?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+            "id": 14,
+            "title": "BBQ Chicken Pizza",
+            "category": "pizza",
+            "price": 23,
+            "rating": 4.6,
+            "desc": "Tangy BBQ sauce, grilled chicken, red onions, and cilantro.",
+            "img": "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+            "id": 15,
+            "title": "Greek Quinoa Salad",
+            "category": "salad",
+            "price": 13.5,
+            "rating": 4.3,
+            "desc": "Quinoa, cherry tomatoes, kalamata olives, and lemon oregano dressing.",
+            "img": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+            "id": 16,
+            "title": "Panna Cotta",
+            "category": "dessert",
+            "price": 12,
+            "rating": 4.7,
+            "desc": "Smooth Italian cream dessert topped with fresh raspberry coulis.",
+            "img": "https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+            "id": 17,
+            "title": "Crispy Fish Sandwich",
+            "category": "burger",
+            "price": 15,
+            "rating": 4.5,
+            "desc": "Wild-caught cod, tartar sauce, and house-made coleslaw.",
+            "img": "https://images.unsplash.com/photo-1525059696034-4967a8e1dca2?q=80&w=2000&auto=format&fit=crop"
+        },
+        {
+            "id": 18,
+            "title": "Artisanal Gelato Trio",
+            "category": "dessert",
+            "price": 11,
+            "rating": 4.9,
+            "desc": "Three scoops of authentic Italian gelato: Pistachio, Dark Chocolate, and Raspberry.",
+            "img": "https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?q=80&w=800&auto=format&fit=crop"
+        }
+    ],
+    "restaurants": [
+        {
+            "id": 1,
+            "name": "Burger Joint",
+            "location": "Downtown",
+            "distance": "1.2 miles away",
+            "rating": 4.7,
+            "img": "https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+            "id": 2,
+            "name": "Pizza Heaven",
+            "location": "Westside",
+            "distance": "2.5 miles away",
+            "rating": 4.9,
+            "img": "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+            "id": 3,
+            "name": "Healthy Bowls",
+            "location": "Midtown",
+            "distance": "0.8 miles away",
+            "rating": 4.5,
+            "img": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+            "id": 4,
+            "name": "Sweet Tooth Bakery",
+            "location": "Northside",
+            "distance": "3.1 miles away",
+            "rating": 4.8,
+            "img": "https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=800&auto=format&fit=crop"
+        }
+    ]
+}
